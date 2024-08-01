@@ -7,7 +7,6 @@ const redisClient = new Redis({
 })
 const bot = new Bot(process.env.BOT_TOKEN);
 const MUTE_DURATION = +process.env.MUTE_DURATION
-console.log(MUTE_DURATION)
 bot.on('message', async (ctx) => {
     if (ctx.chat.type === 'private') {
        await ctx.reply('Я работаю только в группе!');
